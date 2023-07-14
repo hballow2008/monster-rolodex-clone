@@ -11,7 +11,7 @@ const App = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
+      .then((response) => response.json()) 
       .then((users) => setMonsters(users));
   }, []);
 
@@ -37,6 +37,7 @@ const App = () => {
         onChangeHandler={onSearchChange}
         placeholder='search monsters'
       />
+      
       <CardList monsters={filteredMonsters} />
     </div>
   );
